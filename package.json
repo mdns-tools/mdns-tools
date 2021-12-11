@@ -1,6 +1,6 @@
 {
   "name": "mdns-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -14,6 +14,7 @@
   "main": "background.js",
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
+    "bonjour": "^3.5.0",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
@@ -55,5 +56,10 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "electronWebpack": {
+    "renderer": {
+      "webpackConfig": "webpack.renderer.js"
+    }
+  }
 }
